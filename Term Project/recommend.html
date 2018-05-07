@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>맛추 :: 맛집 추천 및 맛집 정보 안내</title>
+    <meta charset="utf-8">
+    <meta name="author" content="웹클라이언트 컴퓨팅 2조">
+    <meta name="description" content="">
+    <meta name="keywords" content="맛집, 맛집추천">
+    <link type="text/css" rel="stylesheet" href="css/recommend.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+    <script src="js/recommend.js">
+    </script>
+  </head>
+  <body>
+    <div class="menubar">
+      <ul>
+        <li><a href="main.html">홈</a></li>
+        <li><a href="recommend.html">맛집 추천</a></li>
+        <li><a href="region.html">지역별 맛집 찾기</a></li>
+        <li><a href="#">음식 종류별 맛집 찾기</a></li>
+      </ul>
+    </div>
+    <div class="submenu">
+      <ul>
+        <li id="recommend_head">추천 종류</li>
+        <li onclick="season_click()"><a href="#">계절별 추천</a></li>
+        <li onclick="price_click()"><a href="#">가격대별 추천</a></li>
+        <li onclick="food_click()"><a href="#">음식 종류별 추천</a></li>
+      </ul>
+    </div>
+    <div id="content_season">
+      <h3>계절 선택</h3>
+      <p>계절을 선택하고 찾기를 누르면 계절에 따른 맛집을 추천해드립니다.</p>
+      <form>
+        <input type="radio" name="season" value="1" checked> 봄
+        <input type="radio" name="season" value="2">여름
+        <input type="radio" name="season" value="3">가을
+        <input type="radio" name="season" value="4">겨울
+        &nbsp;
+        <input type="button" class="season_button" value="찾기">
+      </form>
+    </div>
+    <div id="content_price">
+      <h3>가격대별 선택</h3>
+      <p>선호하는 가격대를 선택하고 찾기를 누르면 선택하신 가격에 따른 맛집을 추천해드립니다.</p>
+      <form>
+        <input type="radio" name="price" value="1" checked> 10000원 이하
+        <input type="radio" name="price" value="2"> 10000원 ~ 20000원
+        <input type="radio" name="price" value="3"> 20000원 ~ 30000원
+        <input type="radio" name="price" value="4"> 30000원 이상
+        &nbsp;
+        <input type="button" class="price_button" value="찾기">
+      </form>
+    </div>
+    <div id="content_food">
+      <h3>음식 종류 선택</h3>
+      <p>음식 종류를 선택하고 찾기를 누르면 음식 종류에 따른 맛집을 추천해드립니다.</p>
+      <form>
+        <input type="radio" name="food" value="1" checked> 밥류
+        <input type="radio" name="food" value="2"> 고기류
+        <input type="radio" name="food" value="3"> 면류
+        &nbsp;
+        <input type="button" class="food_button" value="찾기">
+      </form>
+    </div>
+  </body>
+</html>
